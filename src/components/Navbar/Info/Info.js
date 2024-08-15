@@ -22,23 +22,23 @@ function Info() {
             });
     }, []);
 
-    if (loading) return <Spinner/>;
+    if (loading) return <Spinner />;
     if (error) return <div>Error: {error.message}</div>;
 
     return (
         <>
-        <p className="ms-5">List of passwords you saved while registering on websites</p>
+            <p className="ms-5">List of passwords you saved while registering on websites</p>
             <div className="Info">
                 {data.map(item => (
                     <div key={item.id} className="information">
                         <h4 className="fs-4">Site:</h4>
                         <p className="fs-5">{item.site}</p>
-                        <hr/>
+                        <hr />
                         <h4 className="fs-4">Username:</h4>
-                        <p className="fs-5">{item.username} <FaCopy/> </p>
-                        <hr/>
+                        <p className="fs-5">{item.username} <FaCopy className="ms-5"/> </p>
+                        <hr />
                         <h4 className="fs-4">Password:</h4>
-                        <p className="fs-5">{item.password} <IoEyeSharp/> <FaCopy/></p>
+                        <p className="fs-5">{item.password} <IoEyeSharp className="ms-5" /> <FaCopy/></p>
                     </div>
                 ))}
             </div>
