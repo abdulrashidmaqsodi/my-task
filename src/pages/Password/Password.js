@@ -2,6 +2,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import './Password.css'
+import Login from "../../components/Login/Login";
 function Password() {
     const nav = [
         { name: 'CredMan' }
@@ -15,6 +16,7 @@ function Password() {
                 <div className="redirect">
                     <NavLink className='nav-links' to='/'>{icon} {data}</NavLink>
                 </div>
+                <Login/>
             </div>
         </>
     )
