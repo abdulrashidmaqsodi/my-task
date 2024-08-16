@@ -1,10 +1,10 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import './Login.css'
+import './AddPassword.css'
 import axios from 'axios';
 import { useState } from 'react';
 import Swal from 'sweetalert2';
-function Login() {
+function AddPassword() {
     const [formData, setFormData] = useState({})
 
     const restFormData = () => {
@@ -72,4 +72,4 @@ function Login() {
         </div>
     )
 }
-export default Login;
+export default AddPassword;

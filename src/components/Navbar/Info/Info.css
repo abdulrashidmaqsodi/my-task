@@ -10,3 +10,6 @@
     border: 1px solid black;
     padding: 8px;
 }
+.inputPassword{
+    all: unset !important
+}

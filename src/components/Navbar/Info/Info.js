@@ -2,13 +2,13 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Spinner from "../../Spinner/Spinner";
 import './Info.css'
-import { FaCopy } from "react-icons/fa";
-import { IoEyeSharp } from "react-icons/io5";
+import Card from "../../Card";
 
 function Info() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+  
 
     useEffect(() => {
         axios.get('https://66b4311c9f9169621ea2030c.mockapi.io/api/v1/savedpasswords')
@@ -25,22 +25,15 @@ function Info() {
     if (loading) return <Spinner />;
     if (error) return <div>Error: {error.message}</div>;
 
+   
+
     return (
         <>
             <p className="ms-5">List of passwords you saved while registering on websites</p>
             <div className="Info">
                 {data.map(item => (
-                    <div key={item.id} className="information">
-                        <h4 className="fs-4">Site:</h4>
-                        <p className="fs-5">{item.site}</p>
-                        <hr />
-                        <h4 className="fs-4">Username:</h4>
-                        <p className="fs-5">{item.username} <FaCopy className="ms-5"/> </p>
-                        <hr />
-                        <h4 className="fs-4">Password:</h4>
-                        <p className="fs-5">{item.password} <IoEyeSharp className="ms-5" /> <FaCopy/></p>
-                    </div>
-                ))}
+                    <Card item={item} key={item.id}/>
+                 ))}
             </div>
         </>
     );
