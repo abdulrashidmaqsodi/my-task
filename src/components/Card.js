@@ -22,7 +22,7 @@ function Card({item}) {
             <p className="fs-5">{item.site}</p>
             <hr />
             <h4 className="fs-4">Username:</h4>
-            <p className="fs-5">{item.username} <FaCopy className="ms-5" onClick={() => handleCopy(item.username)} /> </p>
+            <p className="fs-5">{item.username} <FaCopy className="ms-5" style={{cursor : 'pointer'}} onClick={() => handleCopy(item.username)} /> </p>
             <hr />
             <h4 className="fs-4">Password:</h4>
             <input className="inputPassword"
@@ -31,9 +31,9 @@ function Card({item}) {
                 readOnly
             />
             <span onClick={togglePasswordVisibility}>
-                {showPassword ? <FaEyeSlash /> : <FaEye />}
+                {showPassword ? <FaEyeSlash style={{cursor : 'pointer'}} /> : <FaEye style={{cursor : 'pointer'}} />}
             </span>
-            <FaCopy className="ms-2" onClick={() => handleCopy(item.password)}/>
+            <FaCopy className="ms-2" style={{cursor : 'pointer'}} onClick={() => handleCopy(item.password)}/>
         </div>
     )
 }
