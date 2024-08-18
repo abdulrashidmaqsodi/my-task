@@ -22,7 +22,7 @@ function Card({item}) {
             <p className="fs-5">{item.site}</p>
             <hr />
             <h4 className="fs-4">Username:</h4>
-            <p className="fs-5">{item.username} <FaCopy className="ms-5" style={{cursor : 'pointer'}} onClick={() => handleCopy(item.username)} /> </p>
+            <p className="fs-5">{item.username} <FaCopy className="ms-5"  onClick={() => handleCopy(item.username)} /> </p>
             <hr />
             <h4 className="fs-4">Password:</h4>
             <input className="inputPassword"
