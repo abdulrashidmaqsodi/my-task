@@ -5,7 +5,7 @@ import Info from '../../components/Navbar/Info/Info';
 
 function Home() {
     const nav = [
-        {name : 'CredMan', password: 'Save Password', icon: <FaArrowRight />}
+        {name : 'CredMan', password: 'Save Password', icon: <FaArrowRight />, link: "/password"}
     ]
     return (
        <>

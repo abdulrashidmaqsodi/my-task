@@ -1,1 +1,14 @@
-
+body {
+    overflow-x: hidden;
+    width: 100%;
+    padding: 3rem;
+  }
+  body * {
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 500px) {
+    body {
+      padding: 1rem;
+    }
+  }

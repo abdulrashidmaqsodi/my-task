@@ -3,17 +3,16 @@ import { FaLongArrowAltLeft } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import './Password.css'
 import AddPassword from "../../components/AddPassword/AddPassword";
-function Password() {
+function Password({icon, data}) {
     const nav = [
-        { name: 'CredMan' }
+        { name: "CredMan", password: "Go Back Home", icon: <FaLongArrowAltLeft />, link:"/" },
     ]
-    const data = 'Go Back Home'
-    const icon = <FaLongArrowAltLeft /> 
+   
     return (
         <>
             <div>
                 <Navbar {...nav[0]} />
-                <div className="redirect">
+                <div>
                     <NavLink className='nav-links' to='/'>{icon} {data}</NavLink>
                 </div>
                 <AddPassword/>
@@ -22,3 +21,5 @@ function Password() {
     )
 }
 export default Password;
+
+

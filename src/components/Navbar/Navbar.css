@@ -1,34 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,503;1,14..32,503&display=swap');
-.maindiv{
-    display: grid;
-    grid-auto-flow: column;
+
+.maindiv {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
-.credMan{
-    width: 22px;
-    height: 61px;
-    margin-top: 52px;
-    margin-left: 65px;
+
+.credMan {
+    font-size: 40px;
     font-weight: 700;
-    size: 50px;
-    line-height: 61.51px;
     color: #971883;
-    font-family: 'Inter';
+    font-family: "Inter";
 }
-.nav-link{
+
+.nav-link {
     display: inline;
-    width: 175px;
-    height: 29px;
-    margin-top: 87px;
-    margin-left: 900px;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-weight: 500;
     font-size: 20px;
     line-height: 29.05px;
     color: #000000;
-    border-bottom: 1px solid black;
-}
-.wrapper{
-    margin-top: 110px;
+    border: 1px solid black;
+    padding: 0.5rem;
 }
 
+/* for mobile */
+
+@media (max-width: 500px) {
+    .credMan {
+      font-size: 30px;
+    }
+  }

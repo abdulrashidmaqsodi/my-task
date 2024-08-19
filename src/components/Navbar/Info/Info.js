@@ -29,7 +29,7 @@ function Info() {
 
     return (
         <>
-            <p className="ms-5">List of passwords you saved while registering on websites</p>
+            <p>List of passwords you saved while registering on websites</p>
             <div className="Info">
                 {data.map(item => (
                     <Card item={item} key={item.id}/>
